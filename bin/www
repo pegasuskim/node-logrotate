@@ -11,6 +11,13 @@ if (cluster.isMaster) {
         cluster.fork();
     });
 
+    // logrotate 적용 시 Listen for the signal
+    // http://nompute.com/posts/2013/07/27/nodejs_cluster_and_logrotate/ 참조 할것
+    process.on('SIGUSR2', function() {
+      // Reload the logger configuration wholesale
+      common.log.info("Log files reloaded.");
+    });
+
     // file log
     common.filelog.log('cluster Master Set', true);
     cluster.on('online', function(worker) {
