@@ -1,0 +1,38 @@
+{
+  "dev": true,
+  "host": "0.0.0.0",
+  "port": 3000,
+  "namespace": "dev",
+  "status": "0",
+  "ios_client_version": "",
+  "android_client_version": "",
+  "server_url_amazon": "amazonserver_url",
+  "server_url": "",
+  "static_url": "",
+  "static_frount_url":"AWSURL",
+  "google_url":"market URL",
+  "apple_url":"market URL",
+  "logging": [
+      {
+        "level": "verbose",
+        "type": "Console",
+        "colorize": true,
+        "timestamp": true
+      },
+      {
+        "level": "file",
+        "type": "File",
+        "timestamp": true,
+        "filename": "/dev/null"
+      }
+    ],
+  "test": {
+	    "username": "postgres",
+	    "password": "postgres`12`",
+	    "database": "lolli_node_staging",
+	    "host": "lolli-node-server-db.cfi4oknusnvd.ap-northeast-1.rds.amazonaws.com",
+	    "dialect": "postgres",
+      "logging": false
+  }
+
+}
